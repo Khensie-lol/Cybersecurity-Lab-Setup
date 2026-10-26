@@ -19,12 +19,12 @@ This lab shows a working Cybersecurity setup using VirtualBox and Kali Linux.
 
 ### Screenshot 1 - Kali IP Proof (10.0.0.2/24)
 This proves Kali is connected to NATNetwork with correct IP.
-![Kali IP Proof](1-kali-ip.png)
+![Kali IP Proof](1-Kali-ip.png)
 
 
 ### Screenshot 2 - Internet & Network Proof
 Ping to 8.8.8.8 and NATNetwork Manager showing 10.0.0.0/24.
-![Kali Ping Proof](2-kali-ping.png)
+![Kali Ping Proof](2-Kali-ping.png)
 
 ### 3. Verification Commands Used
 ```bash
