@@ -1,28 +1,38 @@
-# Cybersecurity-Lab-Setup
- My cybersecurity lab setup for internship Task 1 Week 1
- # Cybersecurity Lab Setup - WK1-PM1
+ # Cybersecurity Lab Setup
 
-For this task I setup a cybersecurity testing lab on my HP laptop (Windows 11) for ethical hacking practice.
+## Student: Khensie - Lab Setup Working
 
-Setup Details:
-- Base: VirtualBox (latest version)
-- Attacking Machine: Kali Linux VM
-- Network: NATNetwork with subnet 10.0.0.0/24
-- Kali Linux IP: 10.0.0.2/24 (Static)
-- Gateway: 10.0.0.1, DNS: 8.8.8.8
-- Host Laptop IP:192.168.8.60
-- Specs:HP 250 G9 Notebook PC, Intel Celeron N4500 @ 1.10GHz (2 Cores), 8GB RAM
+This lab shows a working Cybersecurity setup using VirtualBox and Kali Linux.
 
-Additional Configurations Done:
-- Enabled Clipboard - Bidirectional
-- Enabled Drag & Drop - Bidirectional
-- Enabled Shared Folder - /downloads shared from host
-- Kali has full internet access
+### 1. Virtual Machine Configuration
+- **Platform:** Oracle VirtualBox 7.x
+- **VM:** kali-linux-2026.2-virtualbox-amd64
+- **State:** Running - Clean Install - Working Internet
+- **Shared Folder:** sf_downloads (Working)
 
-Problems I Faced:
-1. Virtualization was disabled in BIOS - Enabled VT-x from BIOS settings.
-2. Kali had no internet when I used 10.0.0.1 as DNS - Fixed by using 8.8.8.8 as DNS server and 10.0.0.1 as Gateway.
-Snapshots Taken: Initial setup snapshot saved in VirtualBox.
+### 2. Network Configuration - NATNetwork
+- **Network Name:** NATNetwork
+- **Subnet:** 10.0.0.0/24
+- **Kali IP:** 10.0.0.2/24 (DHCP)
+- **Interface:** eth0 UP
+- **MAC:** 08:00:27:5a:87:bc
+
+### Screenshot 1 - Kali IP Proof (10.0.0.2/24)
+This proves Kali is connected to NATNetwork with correct IP.
+![Kali IP Proof](1-kali-ip.png)
 
 
-This lab will be used for future cybersecurity tools practice.
+### Screenshot 2 - Internet & Network Proof
+Ping to 8.8.8.8 and NATNetwork Manager showing 10.0.0.0/24.
+![Kali Ping Proof](2-kali-ping.png)
+
+### 3. Verification Commands Used
+```bash
+ip a
+# Shows: inet 10.0.0.2/24 brd 10.0.0.255 scope global dynamic noprefixroute eth0
+
+ping -c 4 8.8.8.8
+# Shows: 4 packets transmitted, 4 received, 0% packet loss
+
+ping -c 4 google.com
+# Shows internet DNS working
