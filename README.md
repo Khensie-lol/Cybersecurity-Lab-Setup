@@ -22,7 +22,7 @@ Additional Configurations Done:
 Problems I Faced:
 1. Virtualization was disabled in BIOS - Enabled VT-x from BIOS settings.
 2. Kali had no internet when I used 10.0.0.1 as DNS - Fixed by using 8.8.8.8 as DNS server and 10.0.0.1 as Gateway.
-Snapshots Taken: Initial setup snapshot saved in VirtualBox.<img width="1080" height="1700" alt="Lab 3 Result - Makhensa Chauke" src="https://github.com/user-attachments/assets/6f294ca6-4e20-4116-a1e3-344180c0a0a2" />
+Snapshots Taken: Initial setup snapshot saved in VirtualBox.
 
 
 This lab will be used for future cybersecurity tools practice.
